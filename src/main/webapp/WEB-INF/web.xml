@@ -4,6 +4,26 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>ServletLivreList</servlet-name>
+  	<display-name>ServletLivreList</display-name>
+  	<description></description>
+  	<servlet-class>dev.biblio.servlet.ServletLivreList</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ServletDetailLivre</servlet-name>
+  	<display-name>ServletDetailLivre</display-name>
+  	<description></description>
+  	<servlet-class>dev.biblio.servlet.ServletDetailLivre</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ServletLivreList</servlet-name>
+  	<url-pattern>/ServletLivreList</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ServletDetailLivre</servlet-name>
+  	<url-pattern>/ServletDetailLivre</url-pattern>
+  </servlet-mapping>
 <!--   <servlet> -->
 <!--   	<servlet-name>Servlet</servlet-name> -->
 <!--   	<display-name>Servlet</display-name> -->

@@ -22,14 +22,14 @@ import dev.biblio.services.CrudAuteurInterface;
  * Servlet implementation class Servlet
  */
 
-@WebServlet ("/auteur")
-public class Servlet extends HttpServlet {
+@WebServlet ("/listauteur")
+public class ServletAuteurList extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Servlet() {
+    public ServletAuteurList() {
         super();
        
     }
@@ -40,9 +40,8 @@ public class Servlet extends HttpServlet {
     
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		//response.getWriter().append("Served at: ").append(request.getContextPath());
-		Config.getInstance();
 		
+		Config.getInstance();
 		CrudAuteurInterface crudauteur = new CrudAuteur();
 		List<Auteur> listauteur = crudauteur.lister();
 		Gson gson = new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create();
